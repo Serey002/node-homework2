@@ -1,4 +1,4 @@
-import { UserRepository } from "../Repository/UserRepository";
+import  UserRepository from "../Repository/UserRepository.js";
 
 class UserService {
     static async getUsers() {
@@ -26,3 +26,5 @@ class UserService {
         return await UserRepository.deleteUser(id);
     }
 }
+
+export default UserService;

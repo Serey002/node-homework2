@@ -1,21 +1,15 @@
 {
-  "name": "homework2",
+  "name": "node-homework2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Serey002/node-homework2.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Serey002/node-homework2/issues"
-  },
-  "homepage": "https://github.com/Serey002/node-homework2#readme"
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.11.5"
+  }
 }

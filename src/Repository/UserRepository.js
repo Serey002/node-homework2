@@ -1,14 +1,14 @@
-import { Database } from "../config/database.js";
+import Database from "../config/database.js";
 
-export class UserRepository {
+class UserRepository {
     static async getAllUsers() {
-        const [rows] = await Database.pool.promise().query("SELECT * FROM users");
+        const [rows] = await Database.pool.query("SELECT * FROM users");
         return rows;
     }
 
 
     static async getUserById(id) {
-        const [rows] = await Database.pool.promise().query("SELECT * FROM users WHERE id = ?", [id]);
+        const [rows] = await Database.pool.query("SELECT * FROM users WHERE id = ?", [id]);
         return rows[0];
     }
 
@@ -28,5 +28,7 @@ export class UserRepository {
         return id;
     }
 }
+
+export default UserRepository;
 
 

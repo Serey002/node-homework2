@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api", userRoutes);
 
 // Home Route
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.json({
     message: "Welcome to Professional Node.js MVC API",
   });

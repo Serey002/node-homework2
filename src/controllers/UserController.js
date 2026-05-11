@@ -1,6 +1,7 @@
 import BaseController from "./BaseController.js";
+import UserService from "../Services/UserService.js";
 
-export class UserController extends BaseController {
+class UserController extends BaseController {
   async getAllUsers(req, res) {
     try {
       const users = await UserService.getUsers();
@@ -60,3 +61,5 @@ export class UserController extends BaseController {
     }
   }
 }
+
+export default new UserController();
